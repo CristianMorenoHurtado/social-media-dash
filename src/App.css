@@ -1,38 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+li {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  margin: auto;
+  padding: 0 24px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+  padding: 24px 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-header {
+  font-weight: bold;
+}
+
+.nav-subheader {
+  color: #7e818f;
+}
+
+.dark-mode-header {
+  color: #c5cadf;
+}
+
+.dark-button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode-button {
+  width: 36px;
+  border-radius: 8px;
+  height: 16px;
+  border: none;
+  background-color: #adb1ca;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 2px;
+  transition: all 500ms ease;
+}
+
+.dark-theme .dark-mode-button{
+  background-color: none;
+  background-image: linear-gradient(to right, #3a9ad7 , #51c494);
+  justify-content: end;
+}
+
+.dark-theme {
+  background-color: #20222f;
+}
+
+.dark-theme .social-box {
+  background-color: #252b43;
+}
+
+.dark-theme .current-followers,
+.dark-theme .daily-followers,
+.dark-theme .nav-header,
+.dark-theme .overview-header {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dark-theme .social-box:hover {
+  background-color: #333a56;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.dark-mode-button:hover {
+  cursor: pointer;
+  background-color: #3a9ad7;
+}
+
+.dark-mode-slider {
+  width: 12px;
+  height: 12px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
+}
+
+
+
+/* MAIN */
+
+main {
+  width: 100%;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 24px 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-box-wrapper {
+  width: 23%;
+}
+
+.social-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #f0f3fa;
+  padding: 24px 56px;
+  height: 100%;
+  transition: all 500ms ease;
+}
+
+.social-box:hover {
+  background-color: #e1e3f0;
+  cursor: pointer;
+}
+
+
+.social-box-top-color-fb, .social-box-top-color-twtr, .social-box-top-color-insta, .social-box-top-color-yt {
+  height: 4px;
+  width: 100%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.social-box-top-color-fb {
+  background-color: #1590f8;
+}
+
+.social-box-top-color-twtr {
+  background-color: #1aa2f5;
+}
+
+.social-box-top-color-insta {
+  background-image: linear-gradient(to right, #eed8c1 , #ce4a8e);
+}
+
+.social-box-top-color-yt {
+  background-color: #a80124;
+}
+
+.social-wrapper {
+  display: flex;
+}
+
+.social-handle {
+  margin-left: 8px;
+  font-weight: bold;
+  color: #697291;
+}
+
+.social-media-logo {
+  height: 20px;
+  width: 20px;
+}
+
+.followers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.current-followers {
+  font-size: 48px;
+}
+
+.followers-today {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-weight: bold;
+}
+
+.up-arrow {
+  height: auto;
+  width: 12px;
+  margin-right: 8px;
+}
+
+.overview-header {
+  margin-bottom: 16px;
+}
+
+.social-wrapper-overview {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.followers-overview {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.social-box-overview {
+  padding: 24px 24px;
+}
+
+.overciew-percent {
+  display: flex;
+  align-items: center;
+  color: green;
+  font-weight: bold;
+}
+
+.overview-wrapper {
+  flex-wrap: wrap;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px){
+  .social-box-wrapper {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+  
 }
