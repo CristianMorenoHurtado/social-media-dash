@@ -7,12 +7,17 @@ function toggleDarkMode() {
 }
 
 
+function randomNum() {
+    let num = Math.floor(Math.random() * 20000) * 10
+    return num.toString().length >= 4 ? num.toLocaleString('en-US') : num
+}
+
 const Nav = () => {
     return (
             <nav>
                 <div>
                     <h1 className="nav-header">Social Media Dashboard</h1>
-                    <h3 className="nav-subheader">Total Followers: 23,004</h3>
+                    <h3 className="nav-subheader">Total Followers: {randomNum()}</h3>
                 </div>
                 <div className="dark-button-wrapper" onClick={toggleDarkMode}>
                     <h5 className="dark-mode-header">Dark mode</h5>
