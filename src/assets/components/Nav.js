@@ -17,9 +17,7 @@ const Nav = () => {
                 <div className="dark-button-wrapper" onClick={toggleDarkMode}>
                     <h5 className="dark-mode-header">Dark mode</h5>
                     <div className="dark-mode-button">
-                        <div className="dark-mode-slider">
-
-                        </div>
+                        <div className="dark-mode-slider"></div>
                     </div>
                 </div>
             </nav>
