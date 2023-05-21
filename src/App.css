@@ -207,6 +207,10 @@ main {
   font-size: 48px;
 }
 
+.followers-para {
+  color: #697291;
+}
+
 .followers-today {
   display: flex;
   align-items: center;
@@ -259,5 +263,8 @@ main {
   .social-box-wrapper {
     width: 100%;
   }
-  
+
+  .dark-button-wrapper {
+    flex-direction: column;
+  }
 }
