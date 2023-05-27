@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import Main from './assets/components/Main';
 
-test('renders learn react link', () => {
+test('renders Reload Data button', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const buttonElement = screen.getByText(/Reload Data/i);
+  expect(buttonElement).toBeInTheDocument();
 });
+
+test('renders Main', () => {
+  render(<Main />);
+  const element = screen.getByTestId(/Overview/i);
+  expect(element).toBeInTheDocument();
+})

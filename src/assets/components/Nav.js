@@ -8,8 +8,8 @@ function toggleDarkMode() {
 
 
 function randomNum() {
-    let num = Math.floor(Math.random() * 20000) * 10
-    return num.toString().length >= 4 ? num.toLocaleString('en-US') : num
+    let num = Math.floor(Math.random() * 10000) * 100
+    return num.toLocaleString('en-US')
 }
 
 const Nav = () => {

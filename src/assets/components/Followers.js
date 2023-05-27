@@ -5,18 +5,7 @@ import youtubeLogo from '../images/icon-youtube.svg'
 import upArrow from '../images/icon-up.svg'
 import downArrow from '../images/icon-down.svg'
 
-const Followers= () => {
-    function randomNum() {
-        return Math.floor(Math.random() * 10000)
-    }
-
-    function randomSmallNum() {
-        return Math.floor(Math.random() * 1000)
-    }
-
-    let color = 0;
-    randomSmallNum() % 2 ? color = 1 : color = 0;
-
+const Followers= ({color, randomNum, randomSmallNum}) => {
     return (
         <div className="dashboard">
             <div className='social-box-wrapper'>
@@ -31,9 +20,9 @@ const Followers= () => {
                         <p className='followers-para'>FOLLOWERS</p>
                     </div>
                     <div className='followers-today'>
-                        <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                        <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                         <span
-                            style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()} Today
+                            style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()} Today
                         </span>
                     </div>
                 </div>
@@ -50,9 +39,9 @@ const Followers= () => {
                         <p className='followers-para'>FOLLOWERS</p>
                     </div>
                     <div className='followers-today'>
-                    <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                    <img className='up-arrow' src={color ? downArrow : upArrow} alt='up-arrow'/>
                         <span
-                            style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()} Today
+                            style={{ color: color ? 'red' : 'green'}}>{randomSmallNum()} Today
                         </span>
                     </div>
                 </div>
@@ -69,9 +58,9 @@ const Followers= () => {
                         <p className='followers-para'>FOLLOWERS</p>
                     </div>
                     <div className='followers-today'>
-                    <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                    <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                         <span
-                            style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()} Today
+                            style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()} Today
                         </span>
                     </div>
                 </div>
@@ -88,9 +77,9 @@ const Followers= () => {
                         <p className='followers-para'>FOLLOWERS</p>
                     </div>
                     <div className='followers-today'>
-                    <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                    <img className='up-arrow' src={color ? downArrow : upArrow} alt='up-arrow'/>
                         <span
-                            style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()} Today
+                            style={{ color: color ? 'red' : 'green'}}>{randomSmallNum()} Today
                         </span>
                     </div>
                 </div>

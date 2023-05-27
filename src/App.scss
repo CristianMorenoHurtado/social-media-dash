@@ -76,9 +76,13 @@ nav {
   background-color: #adb1ca;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   padding: 0 2px;
   transition: all 500ms ease;
+  &:hover{
+    cursor: pointer;
+    background-color: #3a9ad7;
+  }
 }
 
 .dark-theme .dark-mode-button{
@@ -104,11 +108,6 @@ nav {
 
 .dark-theme .social-box:hover {
   background-color: #333a56;
-}
-
-.dark-mode-button:hover {
-  cursor: pointer;
-  background-color: #3a9ad7;
 }
 
 .dark-mode-slider {
@@ -150,11 +149,10 @@ main {
   padding: 24px 56px;
   height: 100%;
   transition: all 500ms ease;
-}
-
-.social-box:hover {
-  background-color: #e1e3f0;
-  cursor: pointer;
+  &:hover {
+    background-color: #e1e3f0;
+    cursor: pointer;
+  }
 }
 
 
@@ -255,6 +253,28 @@ main {
 
 .overview-wrapper {
   flex-wrap: wrap;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background-color: #ebf0fa;
+  cursor: pointer;
+  transition: all 500ms ease;
+  &:hover {
+    background-color: #e1e3f0;
+  }
+  &:active {
+    border: 1px solid ;
+  }
+}
+
+.dark-theme button {
+  background-color: #252b43;
+  color: white;
+  &:hover {
+    background-color: #333a56;
+  }
 }
 
 /* MOBILE */

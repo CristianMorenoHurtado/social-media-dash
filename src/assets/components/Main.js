@@ -3,12 +3,12 @@ import Followers from './Followers'
 
 
 
-const Main = () => {
+const Main = ({color, randomNum, randomSmallNum}) => {
     return (
         <main>
-            <Followers />
-            <h2 className='overview-header'>Overview - Today</h2>
-            <Data />
+            <Followers color={color} randomNum={randomNum} randomSmallNum={randomSmallNum} />
+            <h2 data-testid="overview" className='overview-header'>Overview - Today</h2>
+            <Data color={color} randomNum={randomNum} randomSmallNum={randomSmallNum} />
         </main>
     )
 }

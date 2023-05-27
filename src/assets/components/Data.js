@@ -5,17 +5,7 @@ import youtubeLogo from '../images/icon-youtube.svg'
 import upArrow from '../images/icon-up.svg'
 import downArrow from '../images/icon-down.svg'
 
-const Data = () => {
-    function randomNum() {
-        return Math.floor(Math.random() * 1000)
-    }
-
-    function randomSmallNum() {
-        return Math.floor(Math.random() * 1000)
-    }
-
-    let color = 0;
-    randomSmallNum() % 2 ? color = 1 : color = 0;
+const Data = ({color, randomNum, randomSmallNum}) => {
     return (
         <div className="dashboard">
             <div className='social-box-wrapper'>
@@ -27,9 +17,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? downArrow : upArrow } alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'red' : 'green' }}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -44,9 +34,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -61,9 +51,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? downArrow : upArrow } alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'red' : 'green'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -78,9 +68,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -95,9 +85,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -112,9 +102,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? downArrow : upArrow } alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'red' : 'green'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -129,9 +119,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? upArrow : downArrow} alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'green' : 'red'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
@@ -146,9 +136,9 @@ const Data = () => {
                     <div className='followers-overview' >
                         <h1 className='daily-followers'>{randomNum()}</h1>
                         <div className='overciew-percent'>
-                            <img className='up-arrow' src={color === 1 ? upArrow : downArrow} alt='up-arrow'/>
+                            <img className='up-arrow' src={color ? downArrow : upArrow } alt='up-arrow'/>
                             <span
-                                style={{ color: color === 1 ? 'green' : 'red'}}>{randomSmallNum()}%
+                                style={{ color: color ? 'red' : 'green'}}>{randomSmallNum()}%
                             </span>
                         </div>
                     </div>
